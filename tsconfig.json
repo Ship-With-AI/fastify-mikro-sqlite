@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "fastify-tsconfig",
+  "compilerOptions": {
+    /* Base Options: */
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "rootDir": ".",
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    /* TypeScript transpilling */
+    "module": "NodeNext",
+    "sourceMap": true,
+    /* The repo code doesn't run in the DOM: */
+    "lib": [
+      "es2022"
+    ],
+    // MikroORM
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "index.ts"
+  ],
+  "exclude": [
+    "dist"
+  ]
+}
